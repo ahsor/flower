@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      background: linear-gradient(90deg, rgb(252, 212, 197) 50%, white 0);
+      background-size: 10px;
+
+    }
+
+    /* desktop default */
+    .layout-container {
+      width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      height: 200px;
+      background-image: url(./images/topbg3.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-color: #e4d7aa;
+    }
+
+    h1 {
+      color: transparent;
+    }
+
+    .lnb {
+      background-color: coral;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .lnb ul {
+      display: flex;
+    }
+
+    .lnb li {
+      padding: 5px 50px;
+    }
+
+    .lnb a {
+      display: block;
+      padding: 10px 20px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .lnb a:hover {
+      background-color: #fff;
+      color: chocolate;
+    }
+
+    .box1 {
+      height: 250px;
+      float: left;
+    }
+
+    .box11 {
+      width: 40%;
+      background-color: #fff;
+    }
+
+    .box12 {
+      width: 60%;
+      background-color: #fff;
+    }
+
+    .box2 {
+      width: calc(25% - 10px + 2.5px);
+      height: 280px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .box21 {
+      background-color: #fff;
+    }
+
+    .box22 {
+      background-color: burlywood;
+    }
+
+    .box23 {
+      background-color: coral;
+    }
+
+    .box24 {
+      background-color: darkkhaki;
+      margin-right: 0;
+    }
+
+    .box12 {
+      padding: 50px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .box12 p span {
+      font-weight: bold;
+    }
+
+    p.title {
+      line-height: 70px;
+      background-color: coral;
+      text-indent: 1rem;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 25px;
+      font-size: 20px;
+    }
+
+    .information {
+      padding-left: 20px;
+    }
+
+    .information li {
+      list-style-type: circle;
+      margin-left: 20px;
+      line-height: 30px;
+    }
+
+    .information li span {
+      display: inline-block;
+      width: 70px;
+      font-weight: bold;
+    }
+
+    .box21~div {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box21~div>* {
+      position: absolute;
+    }
+
+    .box21~div>.comment {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.63);
+      bottom: 50px;
+      text-align: right;
+      padding: 15px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .box2 img {
+      width: 100%;
+    }
+
+    footer {
+      background-color: coral;
+    }
+
+    footer address {
+      font-style: normal;
+      line-height: 100px;
+      text-indent: 1rem;
+      color: #fff;
+    }
+
+    @media screen and (max-width:1220px) {
+      .layout-container {
+        width: 98%;
+      }
+    }
+
+    @media screen and (max-width:1020px) {
+      header {
+        background-image: url(./images/topbg2.png);
+      }
+
+      .lnb li {
+        padding: 5px 20px;
+      }
+
+      .box11 {
+        width: 50%;
+      }
+
+      .box12 {
+        width: 50%;
+      }
+
+      .box2 {
+        width: calc(50% - 10px + 5px);
+        margin-bottom: 10px;
+      }
+
+      .box22 {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width:510px) {
+      header {
+        background-image: url(./images/topbg1.png);
+      }
+
+      .lnb li {
+        padding: 5px 10px;
+      }
+
+      .box11 {
+        width: 100%;
+      }
+
+      .box12 {
+        width: 100%;
+      }
+
+      .box2 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout-container">
+    <header class="header">
+      <h1>향기나는꽃집</h1>
+    </header>
+    <nav class="lnb">
+      <ul>
+        <li><a href="#">꽃다발</a></li>
+        <li><a href="#">꽃바구니</a></li>
+        <li><a href="#">화환</a></li>
+        <li><a href="#">화분</a></li>
+      </ul>
+    </nav>
+
+    <section id="section1" class="clearFix">
+      <div class="box1 box11">
+        <img src="./images/shop.png" alt="">
+      </div>
+      <div class="box1 box12">
+        <h2>향기나는 꽃집</h2>
+        <h3>아모르젠 에디션</h3>
+        <p>활짝 핀 꽃과 함께 하는 기분 좋은 하루를 만나보세요</p>
+        <p><span>MOOOI</span> Flower Subscription</p>
+      </div>
+    </section>
+
+    <section id="section2" class="clearFix">
+      <div class="box2 box21">
+        <p class="title">고객 상담 안내</p>
+        <ul class="information">
+          <li><span>전화</span> 031-858-5277</li>
+          <li><span>팩스</span> 031-858-5277</li>
+          <li><span>운영시간</span> 오전 9시 ~ 오후 6시</li>
+          <li><span>점심시간</span> 12시 ~ 1시</li>
+        </ul>
+      </div>
+      <div class="box2 box22">
+        <img src="./images/20180514161749_2.jpg" alt="">
+        <div class="comment">
+          <p class="product-title">축하 감사의 서양난</p>
+          <p>소중한 분들에게 오래 볼 수 있는 서양난을 선물하세요.</p>
+        </div>
+      </div>
+      <div class="box2 box23">
+        <img src="./images/20180514162203_0.jpg" alt="">
+        <div class="comment">
+          <p class="product-title">특별한 날, 특별한 부케</p>
+          <p>신부를 위한 최고의 선택이에요</p>
+        </div>
+      </div>
+      <div class="box2 box24">
+        <img src="./images/20200417115952_0.jpg" alt="">
+        <div class="comment">
+          <p class="product-title">시즌플라워 최대 30%할인</p>
+          <p>지금이 아니면 또 일년을 기다려야 해요</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <address> copyright&copy; 2022 Flower Art </address>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+.box{ width:200px; height: 200px; 
+    background-color: orange;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 5px;
+}
